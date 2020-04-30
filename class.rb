@@ -1,4 +1,5 @@
 class Car
+    REGION = 'USA'
     @@count = 0
     def initialize(name)
         @name = name
@@ -10,7 +11,7 @@ class Car
     end
 
     def self.info
-        puts "#{@@count} instance(s)."
+        puts "#{@@count} instance(s). Region: #{REGION}"
     end
 end
 
@@ -26,3 +27,4 @@ nakade = Car.new('nakade')
 # nakade.hello
 Car.info
 
+Car::REGION
